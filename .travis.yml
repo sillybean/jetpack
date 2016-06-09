@@ -8,6 +8,12 @@ env:
   global:
     - WP_TRAVISCI=phpunit
 
+# We cache node_modules between runs of the same build
+cache:
+  bundler: true
+  directories:
+  - node_modules
+
 # Next we define our matrix of additional build configurations to test against.
 # The versions listed above will automatically create our first configuration,
 # so it doesn't need to be re-defined below.
