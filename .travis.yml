@@ -94,7 +94,7 @@ before_script:
     - npm install -g npm
     - npm install -g gulp-cli
     - npm install
-    - echo "The current node version is: $(node --version)"
+    - node --version
     - npm rebuild node-sass
     - cd /tmp/wordpress
     - git checkout $WP_VERSION
