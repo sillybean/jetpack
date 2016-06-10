@@ -8,4 +8,5 @@ if [ "$WP_TRAVISCI" != "phpunit" ]; then
 	npm install -g npm@'3.8.9'
 	npm install -g gulp-cli
 	npm install
+	npm rebuild node-sass
 fi
