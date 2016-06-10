@@ -95,6 +95,7 @@ before_script:
     - sed -i "s/yourpasswordhere//" wp-tests-config.php
     - cd "/tmp/wordpress/src/wp-content/plugins/"
     - ln -s $PLUGIN_PATH .
+    - cd $PLUGIN_SLUG
 
 script:
     - $WP_TRAVISCI
