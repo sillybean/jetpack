@@ -85,7 +85,17 @@ before_script:
     - export PLUGIN_PATH=$(pwd)
     - export PLUGIN_SLUG=$(basename $(pwd))
     - git clone --depth=1 --branch $WP_VERSION git://develop.git.wordpress.org/ /tmp/wordpress
-    - ./tests/load-travis.sh
+#    - ./tests/load-travis.sh
+    - gem install sass
+    - gem install compass
+    - source ~/.nvm/nvm.sh
+    - nvm install node
+    - nvm alias default node
+    - npm install -g npm
+    - npm install -g gulp-cli
+    - npm install
+    - echo "The current node version is: $(node --version)"
+    - npm rebuild node-sass
     - cd /tmp/wordpress
     - git checkout $WP_VERSION
     - mysql -u root -e "CREATE DATABASE wordpress_tests;"
