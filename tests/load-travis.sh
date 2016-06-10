@@ -4,7 +4,8 @@ if [ "$WP_TRAVISCI" != "phpunit" ]; then
 	gem install sass
 	gem install compass
 	source ~/.nvm/nvm.sh
-	nvm use 5
+	nvm install 5.11.1
+	nvm use 5.11.1
 	npm install -g npm@'3.8.9'
 	npm install -g gulp-cli
 	npm install
