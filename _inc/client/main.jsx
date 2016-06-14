@@ -5,6 +5,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import assign from 'lodash/assign';
+import Popovers from 'components/popover/docs/example.jsx';
 
 /**
  * Internal dependencies
@@ -95,6 +96,7 @@ const Main = React.createClass( {
 			<div>
 				<Masthead { ...this.props } />
 					<div className="jp-lower">
+						<Popovers { ...this.props } />
 						<JetpackNotices { ...this.props } />
 						{ this.renderMainContent( this.props.route.path ) }
 						{
