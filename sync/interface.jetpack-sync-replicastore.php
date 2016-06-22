@@ -114,6 +114,8 @@ interface iJetpack_Sync_Replicastore {
 
 	public function delete_user( $user_id );
 
+	public function get_allowed_mime_types( $user_id );
+
 	// full checksum
 	public function checksum_all();
 }

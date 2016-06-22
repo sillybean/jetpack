@@ -541,6 +541,10 @@ ENDSQL;
 		$this->invalid_call();
 	}
 
+	public function get_allowed_mime_types( $user_id ) {
+		
+	}
+
 	public function checksum_all() {
 		return array(
 			'posts'    => $this->posts_checksum(),
